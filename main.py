@@ -65,8 +65,8 @@ async def generate(prompt_request: PromptRequest):  # Use Pydantic model
     
 
 
-@app.get("/")
-async def away():
-    return {"message": "Welcome to my bullshit"}
+# @app.get("/")
+# async def away():
+#     return {"message": "Welcome to my bullshit"}
 
 
