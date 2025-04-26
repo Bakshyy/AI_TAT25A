@@ -6,6 +6,7 @@ from fastapi import Body
 from pydantic import BaseModel  # Import Pydantic's BaseModel
 import os
 
+
 # Initialize the FastAPI app
 app = FastAPI()
 
@@ -61,7 +62,11 @@ async def generate(prompt_request: PromptRequest):  # Use Pydantic model
     except Exception as e:
         # Handle API or other errors
         raise HTTPException(status_code=500, detail=str(e))
-
+    
+    
+@app.get("/NewPage")
+async def NewPage():
+    return {"message": "New Page"}
 
 
 
